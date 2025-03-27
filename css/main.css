@@ -594,8 +594,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #cc005f;
-	border-bottom: 1px solid #FF0077;
+	color: #fa6604;
+	border-bottom: 1px solid #fa6604;
 }
 label, legend {
 	font-family: "poppins-bold", sans-serif;
@@ -2342,7 +2342,7 @@ header .logo a {
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
-	border-color: #FF0077;
+	border-color: #f17006;
 	color: #FFFFFF;
 }
 #contact textarea {
@@ -2350,7 +2350,7 @@ header .logo a {
 	padding: 1.8rem 2rem;
 }
 #contact textarea:focus {
-	border-color: #FF0077;
+	border-color: #f77c09;
 	color: #FFFFFF;
 }
 #contact button.submitform {
@@ -2366,7 +2366,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-	background: #cc005f;
+	background: #06e619;
 }
 #message-warning, #message-success {
 	display: none;
@@ -2578,7 +2578,7 @@ footer .copyright span:last-child::after {
 	width: 6rem;
 	line-height: 6.6rem;
 	text-align: center;
-	background: #cc005f;
+	background: #e97305;
 	color: #FFFFFF;
 	text-align: center;
 	text-transform: uppercase;
@@ -2593,7 +2593,7 @@ footer .copyright span:last-child::after {
 	line-height: inherit;
 }
 #go-top a:hover {
-	background: #000000;
+	background: #03e203;
 }
 .floating-whatsapp-button {
 	position: fixed;
@@ -2622,5 +2622,25 @@ footer .copyright span:last-child::after {
 	width: 50px;
 	height: 50px;
   }
+
+  input::placeholder {
+	color: rgba(228, 8, 8, 0.89); /* Cambia el color del placeholder a negro */
+}
+
+#contactEmail::placeholder {
+	color:rgb(97, 95, 95);
+  }
+
+  #contactName::placeholder {
+	color:rgb(97, 95, 95);
+  }
+  #contactSubject::placeholder {
+	color:rgb(97, 95, 95);
+  }
+  #contactMessage::placeholder {
+	color:rgb(97, 95, 95);
+  }
   
+
+
 /*# sourceMappingURL=main.css.map */
