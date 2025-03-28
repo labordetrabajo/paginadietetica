@@ -134,30 +134,32 @@
    });
 
 	
-	/*-----------------------------------------------------*/
-  	/* Navigation Menu
-   ------------------------------------------------------ */  
-   var toggleButton = $('.menu-toggle'),
-       nav = $('.main-navigation');
+   $(document).ready(function() {
+    var toggleButton = $('.menu-toggle'),
+        nav = $('.main-navigation'),
+        icon = toggleButton.find('i');
 
-   // toggle button
-   toggleButton.on('click', function(e) {
+    // Toggle del menú
+    toggleButton.on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('is-clicked');
+        nav.slideToggle();
 
-		e.preventDefault();
-		toggleButton.toggleClass('is-clicked');
-		nav.slideToggle();
+        // Cambia el icono entre lupa y "X"
+        if ($(this).hasClass('is-clicked')) {
+            icon.removeClass('fa-search').addClass('fa-times');
+        } else {
+            icon.removeClass('fa-times').addClass('fa-search');
+        }
+    });
 
-	});
-
-   // nav items
-  	nav.find('li a').on("click", function() {   
-
-   	// update the toggle button 		
-   	toggleButton.toggleClass('is-clicked'); 
-   	// fadeout the navigation panel
-   	nav.fadeOut();   		
-   	     
-  	});
+    // Cerrar menú al hacer clic en un enlace
+    nav.find('li a').on("click", function() {
+        toggleButton.removeClass('is-clicked');
+        nav.fadeOut();
+        icon.removeClass('fa-times').addClass('fa-search'); // Restaurar icono
+    });
+});
 
 
    /*---------------------------------------------------- */

@@ -1260,6 +1260,39 @@ header .logo a {
 	color: #FF0077;
 }
 
+/* Estilos para el botón de menú */
+.menu-toggle {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo del icono de la lupa */
+.menu-toggle i {
+    font-size: 24px;
+    color: #0ee919;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cambio de icono cuando el menú está abierto */
+.menu-toggle.is-clicked i {
+    color: #ff0077;
+    transform: rotate(180deg);
+}
+
+/* Ocultamos el texto "Menu" */
+.menu-toggle span {
+    display: none;
+}
+
 /**
  * responsive:
  * header styles
