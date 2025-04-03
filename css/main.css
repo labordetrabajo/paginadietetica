@@ -594,8 +594,13 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
+<<<<<<< HEAD
 	color: #cc005f;
 	border-bottom: 1px solid #FF0077;
+=======
+	color: #fa6604;
+	border-bottom: 1px solid #fa6604;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 label, legend {
 	font-family: "poppins-bold", sans-serif;
@@ -1252,12 +1257,53 @@ header .logo a {
 	border: none;
 }
 .main-navigation li a:hover {
+<<<<<<< HEAD
 	color: #FF0077;
+=======
+	color: #e99b09;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 	padding-left: 1rem;
 }
 .main-navigation li.current > a {
 	background: none;
+<<<<<<< HEAD
 	color: #FF0077;
+=======
+	color: #e99b09;
+}
+
+/* Estilos para el botón de menú */
+.menu-toggle {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo del icono de la lupa */
+.menu-toggle i {
+    font-size: 24px;
+    color: #0ee919;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cambio de icono cuando el menú está abierto */
+.menu-toggle.is-clicked i {
+    color: #ff0077;
+    transform: rotate(180deg);
+}
+
+/* Ocultamos el texto "Menu" */
+.menu-toggle span {
+    display: none;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 
 /**
@@ -1384,7 +1430,11 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
+<<<<<<< HEAD
 	border-color: #cc005f;
+=======
+	border-color: #e99b09;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 .intro-content .button::after {
 	display: inline-block;
@@ -1416,7 +1466,11 @@ header .logo a {
 	color: #e79e17;
 }
 .intro-social li a:hover, .intro-social li a:focus {
+<<<<<<< HEAD
 	color: #cc005f;
+=======
+	color: #04ce5f;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 
 /**
@@ -2125,7 +2179,11 @@ header .logo a {
 	color: #0dd348;
 }
 #services .section-intro p {
+<<<<<<< HEAD
 	color: rgba(255, 255, 255, 0.7);
+=======
+	color: rgb(255, 255, 255);
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 .services-content {
 	max-width: 1200px;
@@ -2147,10 +2205,17 @@ header .logo a {
 	color: #f1a90e;
 }
 .services-list h3 {
+<<<<<<< HEAD
 	color: #FFFFFF;
 }
 .services-list .desc {
 	color: rgba(255, 255, 255, 0.6);
+=======
+	color: #f1a90e;
+}
+.services-list .desc {
+	color: rgb(255, 255, 255);
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 
 /* pagination */
@@ -2172,7 +2237,11 @@ header .logo a {
 	background: #FFFFFF;
 }
 .owl-theme .owl-controls .owl-page.active span {
+<<<<<<< HEAD
 	background: #FF0077;
+=======
+	background: #f1a90e;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 
 
@@ -2342,7 +2411,11 @@ header .logo a {
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
+<<<<<<< HEAD
 	border-color: #FF0077;
+=======
+	border-color: #f17006;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 	color: #FFFFFF;
 }
 #contact textarea {
@@ -2350,7 +2423,11 @@ header .logo a {
 	padding: 1.8rem 2rem;
 }
 #contact textarea:focus {
+<<<<<<< HEAD
 	border-color: #FF0077;
+=======
+	border-color: #f77c09;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 	color: #FFFFFF;
 }
 #contact button.submitform {
@@ -2366,7 +2443,11 @@ header .logo a {
 	color: #FFFFFF;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
+<<<<<<< HEAD
 	background: #cc005f;
+=======
+	background: #06e619;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 #message-warning, #message-success {
 	display: none;
@@ -2578,7 +2659,11 @@ footer .copyright span:last-child::after {
 	width: 6rem;
 	line-height: 6.6rem;
 	text-align: center;
+<<<<<<< HEAD
 	background: #cc005f;
+=======
+	background: #e97305;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 	color: #FFFFFF;
 	text-align: center;
 	text-transform: uppercase;
@@ -2593,7 +2678,11 @@ footer .copyright span:last-child::after {
 	line-height: inherit;
 }
 #go-top a:hover {
+<<<<<<< HEAD
 	background: #000000;
+=======
+	background: #03e203;
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 }
 .floating-whatsapp-button {
 	position: fixed;
@@ -2622,5 +2711,29 @@ footer .copyright span:last-child::after {
 	width: 50px;
 	height: 50px;
   }
+<<<<<<< HEAD
   
+=======
+
+  input::placeholder {
+	color: rgba(228, 8, 8, 0.89); /* Cambia el color del placeholder a negro */
+}
+
+#contactEmail::placeholder {
+	color:rgb(97, 95, 95);
+  }
+
+  #contactName::placeholder {
+	color:rgb(97, 95, 95);
+  }
+  #contactSubject::placeholder {
+	color:rgb(97, 95, 95);
+  }
+  #contactMessage::placeholder {
+	color:rgb(97, 95, 95);
+  }
+  
+
+
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 /*# sourceMappingURL=main.css.map */

@@ -134,6 +134,7 @@
    });
 
 	
+<<<<<<< HEAD
 	/*-----------------------------------------------------*/
   	/* Navigation Menu
    ------------------------------------------------------ */  
@@ -158,6 +159,34 @@
    	nav.fadeOut();   		
    	     
   	});
+=======
+   $(document).ready(function() {
+    var toggleButton = $('.menu-toggle'),
+        nav = $('.main-navigation'),
+        icon = toggleButton.find('i');
+
+    // Toggle del menú
+    toggleButton.on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('is-clicked');
+        nav.slideToggle();
+
+        // Cambia el icono entre lupa y "X"
+        if ($(this).hasClass('is-clicked')) {
+            icon.removeClass('fa-search').addClass('fa-times');
+        } else {
+            icon.removeClass('fa-times').addClass('fa-search');
+        }
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    nav.find('li a').on("click", function() {
+        toggleButton.removeClass('is-clicked');
+        nav.fadeOut();
+        icon.removeClass('fa-times').addClass('fa-search'); // Restaurar icono
+    });
+});
+>>>>>>> fcd1a54d32efbab1c5206ec2169debe0d078a3b3
 
 
    /*---------------------------------------------------- */
