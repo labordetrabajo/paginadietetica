@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Girasol</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	
+	
+
+	<script>
+		function enviarFormulario(event) {
+		  event.preventDefault();
+		  const formulario = document.getElementById("contactForm");
+		  const datos = new FormData(formulario);
+	  
+		  fetch(formulario.action, {
+			method: formulario.method,
+			body: datos,
+			headers: {
+			  "Accept": "application/json"
+			}
+		  })
+		  .then(response => {
+			if (response.ok) {
+			  return response.json();
+			} else {
+			  throw new Error("Error al enviar el formulario");
+			}
+		  })
+		  .then(data => {
+			console.log(data);
+			alert("Gracias por contactarnos, su mensaje ha sido enviado correctamente");
+			formulario.reset();
+		  })
+		  .catch(error => {
+			console.error(error);
+			alert("Ocurrió un error al enviar el formulario, inténtelo de nuevo más tarde");
+		  });
+		}
+	  
+		// Asociar el evento al formulario
+		document.getElementById("contactForm").addEventListener("submit", enviarFormulario);
+	  </script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+
+<a class="floating-whatsapp-button" href="https://wa.me/541131596543" target="_blank" class="btn-1">
+	<img src="./images/whatsapp-logo.png" alt="WhatsApp" />
+  </a>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>   	
+	<div class="row">
+		<div class="top-bar">
+			<a class="menu-toggle" href="#"><i class="fas fa-search"></i></a>
+
+			<div class="logo">
+			  <a href="index.html">Dietetica Girasol</a>
+		   </div>		      
+
+			<nav id="main-nav-wrap">
+				 <ul class="main-navigation">
+					 <li class="current"><a class="smoothscroll"  href="#intro" title="">Inicio</a></li>
+					 <li><a class="smoothscroll"  href="#services" title="">Sobre Nosotros</a></li>
+					 <li><a class="smoothscroll"  href="#portfolio" title="">Catalogo</a></li>
+					 <li><a class="smoothscroll"  href="#contact" title="">Contacto</a></li>	
+				 </ul>
+			 </nav>    		
+		</div> <!-- /top-bar --> 
+	</div> <!-- /row --> 		
+</header> <!-- /header -->
+
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>Bienvenidos</h5>
+	   			<h1>Dietetica Girasol</h1>
+
+	   			<p class="intro-position">
+	   				<span>Suplementos</span>
+	   				<span>Semillas</span> 
+					   <span>Productos Veganos</span>
+	   				<span>Productos sin TACC</span> 
+					   
+	   				
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#portfolio" title="">Catalogo</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">             
+         <li><a href="https://www.instagram.com/dietetica_girasol_moron/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
+
+
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Productos</h5>
+   			<h1>Nuestro catálogo</h1>
+
+   			<p class="lead">Una amplia selección de alimentos naturales, semillas, cereales, productos sin TACC y mucho más.</p>
+
+			  <!-- Marquesina -->
+				<!-- Marquesina fija a lo largo de la parte superior de la página -->
+				<div class="marquee-wrapper">
+					<div class="marquee">
+					<!-- Duplicamos el contenido para tener un scrolling continuo sin huecos -->
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					<span>¡CONSULTA POR NUESTROS DESCUENTOS! — LUNES A VIERNES DE 9 A 20 HS — SÁBADOS DE 9 A 15 HS </span>
+					</div>
+				</div>
+				
+				<style>
+					/* Contenedor que ocupa toda la ventana y se posiciona fijo */
+					.marquee-wrapper {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100vw;              /* 100% de la vista horizontal */
+					background-color: #fef9c3;   /* Puedes cambiar este color (ej. bg-lime-100) */
+					overflow: hidden;          /* Oculta lo que se salga del contenedor */
+					z-index: 1000;             /* Se ubica por encima de otros elementos */
+					padding: 0.5rem 0;         /* Ajusta el padding vertical, si lo deseas */
+					}
+					
+					/* Contenedor del texto en movimiento */
+					.marquee {
+					display: flex;
+					/* La anchura es el doble para tener dos copias del contenido */
+					width: 200%;
+					animation: marquee 25s linear infinite; /* Aumenta el valor (ej. 30s) para que sea más lento */
+					}
+					
+					/* Cada span ocupa el ancho completo de la ventana */
+					.marquee span {
+					display: inline-block;
+					width: 100vw;              /* 100% de la vista: se muestran uno tras otro */
+					font-weight: 600;
+					font-size: 1rem;           /* Puedes ajustar el tamaño del texto */
+					color: #047857;            /* Cambia el color de la letra según tu preferencia */
+					}
+					
+					/* Keyframes para mover el contenido de derecha a izquierda */
+					@keyframes marquee {
+					0% { transform: translateX(0); }
+					100% { transform: translateX(-50%); }
+					}
+				</style>
+  
+
+			  <!-- Fin Marquesina -->
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/suplementos.png" alt="Suplementos">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Suplementos</h3>	     					    
+		     					    	 <span class="folio-types">
+											Optimiza tu bienestar con nuestra selección de suplementos naturales.
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+					   			<!-- portfolio-wrapper -->
+								   <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+									<div class="bgrid folio-item">
+									  <div class="item-wrap">
+										  <img src="images/portfolio/cereales.jpeg" alt="Cereales">
+										 <a href="#modal-07" class="overlay">	                  	           
+											<div class="folio-item-table">
+												<div class="folio-item-cell">
+														   <h3 class="folio-title">Cereales</h3>	     					    
+															 <span class="folio-types">
+																Nutrición y energía para cada día con nuestra variedad de cereales naturales, ideales para un desayuno completo y saludable.
+														   </span>
+													   </div>	                      	
+											</div>                    
+										 </a>
+									  </div>	               
+									   </div> <!-- /folio-item -->
+
+									   					   			<!-- portfolio-wrapper -->
+								   <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+									<div class="bgrid folio-item">
+									  <div class="item-wrap">
+										  <img src="images/portfolio/vegan.jpeg" alt="Veganos">
+										 <a href="#modal-08" class="overlay">	                  	           
+											<div class="folio-item-table">
+												<div class="folio-item-cell">
+														   <h3 class="folio-title">Productos Veganos</h3>	     					    
+															 <span class="folio-types">
+																Alimentación ética y saludable, pensados para nutrirte sin ingredientes de origen animal.
+														   </span>
+													   </div>	                      	
+											</div>                    
+										 </a>
+									  </div>	               
+									   </div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/hierbas2.jpeg" alt="Hierbas">
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Hierbas Medicinales</h3>	     					    
+		     					    	<span class="folio-types">
+											Descubre el poder de la naturaleza con nuestras hierbas medicinales, 
+											utilizadas tradicionalmente para equilibrar el cuerpo y la mente.
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/clouds.jpg"alt="Semillas">
+	                  <a href="#modal-03" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Semillas</h3>	     					    
+		     					    	<span class="folio-types">
+											Ricas en nutrientes esenciales para una alimentación saludable y equilibrada.
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/beetle.jpg" alt="Apicolas">
+	                  <a href="#modal-04" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Productos Apícolas</h3>	     					    
+		     					    	<span class="folio-types">
+											Aprovecha los beneficios de la colmena con nuestros productos apícolas 100% naturales, ricos en propiedades nutritivas.
+		     					      </span>		     		
+		     					   </div>  	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->     
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/lighthouse.jpg" alt="Celiacos">
+	                  <a href="#modal-05" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Productos sin gluten</h3>	     					    
+		     					    	<span class="folio-types">
+											Disfruta de una alimentación libre de gluten sin renunciar al sabor ni a la calidad.
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/salad.jpg" alt="Frutos">
+	                  <a href="#modal-06" class="overlay">
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Frutos Secos</h3>	     					    
+		     					    	<span class="folio-types">
+											Energía natural en cada bocado: nuestros frutos secos son ideales para una alimentación saludable y llena de sabor.
+		     					      </span>		     		
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-suplementos.jpeg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Suplementos</h4>		      
+					      <p>Nuestros suplementos están formulados para brindarte el soporte nutricional que necesitas en tu día a día. 
+							Desde vitaminas y minerales esenciales hasta complementos específicos para energía, 
+							articulaciones o sistema inmunológico, ofrecemos productos de alta calidad que favorecen tu salud y bienestar 
+							de forma natural.</p>
+
+					      <div class="categories">Comprimidos y en polvo</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20suplementos" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>	      
+
+				   </div> <!-- /modal-01 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-hierbas.jpeg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Hierbas Naturales</h4>		      
+					      <p>Desde la antigüedad, las hierbas medicinales han sido aliadas en el cuidado de la salud. 
+							Nuestra selección incluye plantas con propiedades relajantes, digestivas, inmunoestimulantes y más. 
+							Infusiones, extractos y mezclas naturales te ayudarán a encontrar el equilibrio de manera holística y efectiva.</p>
+
+					      <div class="categories">Orgánicas</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Hierbas%20Naturales" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>	      
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-semillas.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Semillas</h4>		      
+					      <p>Las semillas son una excelente fuente de fibra, ácidos grasos esenciales, proteínas y antioxidantes. 
+							Contamos con una variedad que incluye chía, lino, sésamo, girasol y más, ideales para complementar tus comidas, 
+							mejorar tu digestión y fortalecer tu salud con cada bocado.</p>
+					      <div class="categories">Amplia Variedad</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Semillas" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>		      
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-apicolas.jpeg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Productos Apícolas</h4>		      
+					      <p>La miel, el propóleo, la jalea real y el polen son verdaderos regalos de la naturaleza con propiedades energizantes, 
+							inmunológicas y antioxidantes. Nuestros productos apícolas provienen de fuentes responsables y garantizan la más alta pureza 
+							y calidad para tu bienestar diario.</p>
+
+					      <div class="categories">100% Natural</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Productos%20Apícolas" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-celiacos.jpeg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Productos sin Gluten</h4>		      
+					      <p>Sabemos lo importante que es contar con opciones seguras y deliciosas para celíacos o quienes siguen una dieta libre de gluten. 
+							Por eso, ofrecemos harinas, panes, snacks y otros alimentos cuidadosamente seleccionados para garantizar una 
+							nutrición equilibrada sin comprometer el sabor ni la calidad.</p>
+
+					      <div class="categories">Amplia Variedad</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Productos%20Sin%20Gluten" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>		      
+
+				   </div> <!-- /modal-05 -->
+
+				   <div id="modal-06" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-frutos.jpeg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Frutos Secos</h4>		      
+					      <p>Los frutos secos como almendras, nueces, avellanas y castañas son fuentes naturales de grasas saludables, proteínas y antioxidantes. Son perfectos para snacks, recetas o simplemente para disfrutar en su forma más pura, brindándote un extra de energía y bienestar en tu día a día.</p>
+
+					      <div class="categories">Amplia Variedad</div>			               
+					   </div>
+
+					   <div class="link-box">
+						<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Frutos%20Secos" target="_blank" rel="noopener noreferrer">Consultar</a>
+						<a href="#" class="popup-modal-dismiss">Volver</a>
+					  </div>	      
+
+				   </div> <!-- /modal-06 -->
+
+				   <div id="modal-07" class="popup-modal slider mfp-hide">	
+
+					<div class="media">
+						<img src="images/portfolio/modals/m-cereales.jpg" alt="" />
+					</div>      	
+
+				  <div class="description-box">
+					 <h4>Cereales</h4>		      
+					 <p>Nuestros suplementos están formulados para brindarte el soporte nutricional que necesitas en tu día a día. 
+					   Desde vitaminas y minerales esenciales hasta complementos específicos para energía, 
+					   articulaciones o sistema inmunológico, ofrecemos productos de alta calidad que favorecen tu salud y bienestar 
+					   de forma natural.</p>
+
+					 <div class="categories">Amplia Variedad</div>			               
+				  </div>
+
+				  <div class="link-box">
+					<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Cereales" target="_blank" rel="noopener noreferrer">Consultar</a>
+					<a href="#" class="popup-modal-dismiss">Volver</a>
+				  </div>	      
+
+			  </div> <!-- /modal-08 -->
+
+			  <div id="modal-08" class="popup-modal slider mfp-hide">	
+
+				<div class="media">
+					<img src="images/portfolio/modals/m-vegan.jpeg" alt="" />
+				</div>      	
+
+			  <div class="description-box">
+				 <h4>Productos Veganos</h4>		      
+				 <p>Nuestra selección de productos veganos incluye alimentos libres de ingredientes animales, 
+					ofreciendo opciones nutritivas, sabrosas y sostenibles. Desde proteínas vegetales hasta snacks saludables, 
+					cada producto está diseñado para apoyar un estilo de vida basado en el respeto por los animales y el planeta.</p>
+
+				 <div class="categories">Productos sin maltrato animal</div>			               
+			  </div>
+			  <div class="link-box">
+				<a href="https://wa.me/541131596543?text=Hola%21%20Quiero%20consultar%20por%20Productos%20Veganos" target="_blank" rel="noopener noreferrer">Consultar</a>
+				<a href="#" class="popup-modal-dismiss">Volver</a>
+			  </div>	      
+
+		  </div> <!-- /modal-08 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+
+
+	<!-- CTA Section
+   ================================================== -->
+	<section id="cta" class="grey-section">
+
+
+
+   </section> <!-- /cta --> 
+
+	
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Sobre Nosotros</h5>
+   			<h1>Estamos para servirle</h1>
+
+   			<p class="lead">Somos la dietetica número 1 en zona oeste, con mas de 30 años en el rubro ofrecemos productos de maxima calidad a un precio uigualable</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+
+	      	<div class="service">	
+
+				<span class="icon"><i class="icon-shopping-cart"></i></span>
+      
+
+	            <div class="service-content">	
+
+	            	 <h3>Amplia Variedad</h3>
+
+		            <p class="desc">Contamos con una gran selección de productos naturales, orgánicos y sin TACC. Desde frutos secos y cereales hasta suplementos y alimentos saludables, todo lo que necesitas para una alimentación equilibrada en un solo lugar.
+	         		</p>
+	         		
+	         	</div> 	         	 
+
+				</div> <!-- /service -->
+
+				<div class="service">	
+
+					<span class="icon"><i class="fas fa-phone"></i></span>
+                       
+
+	            <div class="service-content">	
+
+	            	<h3>Atención telefónica</h3>  
+
+		            <p class="desc">Brindamos un servicio de atención telefónica personalizado para responder tus consultas, tomar pedidos y asesorarte sobre nuestros productos. Comunícate con nosotros y te ayudaremos con lo que necesites.
+	         		</p>
+
+	            </div>	                          
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+				<span class="icon"><i class="icon-truck"></i></span>
+	            
+
+	            <div class="service-content">
+
+	            	<h3>Entrega a domicilio</h3>
+
+		            <p class="desc"> Recibí tus productos favoritos sin salir de casa. Ofrecemos un servicio de entrega a domicilio rápido y seguro para que disfrutes de una alimentación saludable con total comodidad.
+	        			</p> 
+
+	            </div> 	            	               
+
+			   </div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="fas fa-apple-alt"></i></span>
+
+              
+
+	            <div class="service-content">
+
+	            	<h3>Productos Naturales</h3>
+
+		            <p class="desc">Priorizamos la calidad y el bienestar, por eso ofrecemos productos naturales, orgánicos y sin aditivos. Una opción saludable para mejorar tu alimentación y estilo de vida.
+	         		</p> 
+	         		
+	            </div>                
+
+				</div> <!-- /service -->
+
+			   <div class="service">
+
+				<span class="icon"><i class="fas fa-tag"></i></span>
+	            
+
+	            <div class="service-content">
+
+	            	<h3>Promociones y Descuentos</h3>
+
+		            <p class="desc">Aprovechá nuestras ofertas especiales en una gran variedad de productos. Renovamos nuestras promociones constantemente para que puedas acceder a alimentos saludables al mejor precio.
+	        			</p> 
+
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+
+	            <div class="service-content">
+
+	            	 <h3>Asesoramiento Nutricional</h3>
+
+		            <p class="desc">Te ayudamos a elegir los productos ideales según tus necesidades. Nuestro equipo está capacitado para brindarte información y recomendaciones para una alimentación equilibrada.
+	        			</p> 
+	        			
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+	      </div> <!-- /services-list -->
+   		
+   	</div> <!-- /services-content -->
+		
+	</section> <!-- /services -->	
+
+	<!-- OCULTO -->
+
+   <!-- stats Section
+
+	<section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="col-twelve">
+
+				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-leaf" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							30
+						</h3>
+
+						<h5 class="stat-title">
+							variedades de semillas
+						</h5>
+
+					</div> 					
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-heart-o" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							20
+						</h3>
+
+						<h5 class="stat-title">
+							suplementos nutricionales 
+						</h5>
+
+					</div>
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-archive" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							40
+						</h3>
+
+						<h5 class="stat-title">
+							productos sin tac
+						</h5>
+
+					</div>									
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-pagelines" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							20
+						</h3>
+
+						<h5 class="stat-title">
+							hierbas medicinales
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="fa fa-medkit" aria-hidden="true"></i>
+						</div>
+
+						<h3 class="stat-count">
+							20
+						</h3>
+
+						<h5 class="stat-title">
+							productos diabéticos
+						</h5>
+
+					</div>
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-clock"></i>
+						</div>
+
+						<h3 class="stat-count">
+							6
+						</h3>
+
+						<h5 class="stat-title">
+							dias a la semana abierto
+						</h5>
+
+					</div> 
+
+				</div> 
+
+			</div> 
+		</div>
+
+	</section>
+
+	================================================== -->
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contacto</h5>
+   			<h1>Contactate con nosotros te responderemos en la brevedad</h1>
+
+   			<p class="lead">Podes realizar tu pedido, preguntar precios y promociones.</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+	   <div class="row contact-form">
+
+		<div class="col-twelve">
+	  
+		  <!-- form -->
+	<!-- FORMULARIO -->
+<form name="sentMessage" id="contactForm" action="https://formspree.io/f/mpwpooae" method="POST" onsubmit="enviarFormulario(event)">
+	<fieldset>
+	  <div class="form-field">
+		<input name="contactName" type="text" id="contactName" placeholder="Nombre"
+		  style="color: rgb(245, 97, 11);" minlength="2" required>
+	  </div>
+  
+	  <div class="form-field">
+		<input name="email" type="email" id="contactEmail" placeholder="Email"
+		  style="color: rgb(245, 97, 11);" minlength="2" required>
+	  </div>
+  
+	  <div class="form-field">
+		<input name="contactSubject" type="text" id="contactSubject" placeholder="Asunto"
+		  style="color: rgb(245, 97, 11);" minlength="2" required>
+	  </div>
+  
+	  <div class="form-field">
+		<textarea name="message" id="contactMessage" placeholder="Mensaje" rows="10" cols="50" required
+		  style="color: rgb(245, 97, 11);" minlength="2"></textarea>
+	  </div>
+  
+	  <div class="form-field">
+		<button class="submitform" type="submit">Enviar</button>
+	  </div>
+	</fieldset>
+  </form>
+	  
+		  <!-- contact-warning -->
+		  <div id="message-warning"></div>
+	  
+		  <!-- contact-success -->
+		  <div id="message-success">
+			<i class="fa fa-check"></i>Tu mensaje fue enviado, ¡gracias!<br>
+		  </div>
+	  
+		</div> <!-- /col-twelve -->
+	  
+	  </div> <!-- /contact-form -->
+	  
+
+</div> <!-- /contact-info -->
+
+<div style="width: 100%; height: 400px;">
+ <iframe 
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.89672192361513!2d-58.61839311358885!3d-34.65053985239709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc766b41b51c9%3A0x3a0d0c9ef18a657a!2sDIETETICA%20GIRASOL!5e0!3m2!1ses!2sar!4v1743733657892!5m2!1ses!2sar" 
+   width="100%" 
+   height="100%" 
+   style="border:0;" 
+   allowfullscreen="" 
+   loading="lazy" 
+   referrerpolicy="no-referrer-when-downgrade">
+ </iframe>
+</div>
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Dirección</h5>
+
+   			<p  style="text-decoration: none; color: rgb(10, 117, 28); font-weight: bold;">
+            Almte. Guillermo Brown 686<br>
+            Morón, Buenos Aires
+            </p>
+
+   		</div>
+		   <div class="col-four tab-full">
+			<div class="icon">
+				<i class="icon-mail"></i>
+			</div>
+			<h5>Correo</h5>
+			<p style="text-decoration: none; color: rgb(10, 117, 28); font-weight: bold;">
+				<a href="mailto:Dietetica.girasol@hotmail.com" style="color: rgb(10, 117, 28);">Dietetica.girasol@hotmail.com</a>
+			</p>
+		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Teléfono</h5>
+
+   			<p style="text-decoration: none; color:rgb(10, 117, 28); font-weight: bold;">
+				<i class="fab fa-whatsapp" style="text-decoration: none; color: rgb(10, 117, 28); font-weight: bold;"></i> 1131596543
+			  </p>
+			  
+
+   		</div>  
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			      <li><a href="https://www.instagram.com/dietetica_girasol_moron/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© soluciones programables.</span> 
+		        	<span>Programado por <a href="https://www.solucionesprogramables.com/" target="_blank">Soluciones Programables</a></span>
+         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
